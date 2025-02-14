@@ -14,7 +14,6 @@ Welcome to force-docs's documentation!
 ======================================
 
 .. toctree::
-   :maxdepth: 1
    :caption: Getting Started
 
    hysplit/running-hysplit  # Add this line
