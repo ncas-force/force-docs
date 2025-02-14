@@ -15,4 +15,8 @@ Welcome to force-docs's documentation!
 
 hysplit/running-hysplit  # Add this line
 
+:glob:
+
+   hysplit/*
+
 
