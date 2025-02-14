@@ -10,6 +10,10 @@ Welcome to force-docs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   hysplit/running_hysplit  # running_hysplit.rst in the hysplit directory
+   hysplit/interpreting_output
+   hysplit/configuration
+
 
 
 Indices and tables
