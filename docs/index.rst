@@ -8,9 +8,9 @@ Welcome to force-docs's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: HYSPLIT:
 
-   hysplit/running_hysplit  # running_hysplit.rst in the hysplit directory
+   hysplit/running-hysplit  # running-hysplit.rst in the hysplit directory
    hysplit/interpreting_output
    hysplit/configuration
 
