@@ -1,8 +1,6 @@
 Force documentation
 =======================================
 
-
-
 .. toctree::
    :maxdepth: 1
    :caption: Hysplit model 
@@ -14,9 +12,5 @@ Force documentation
    
    :caption: FORCE website
    website/introduction
-   
 
    FORCE website <https://force.ncasdata.org/force>
-
-
-
