@@ -2,6 +2,6 @@ Force documentation
 =======================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 10
    hysplit/introduction
    hysplit/runninghysplit
