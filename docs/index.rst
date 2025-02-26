@@ -3,7 +3,7 @@ Force documentation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Information about how FORCE make use of the HYSPLIT model
+   :caption: Information on how FORCE use the HYSPLIT model
 
    hysplit/runninghysplit
    
