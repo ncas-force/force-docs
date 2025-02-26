@@ -7,7 +7,7 @@ ncas_amof_netcdf_template documentation
    :maxdepth: 1
    :caption: Getting Started
 
-   running-hysplit
+   hysplit/running-hysplit
    
    FORCE website <https://https://force.ncasdata.org/force>
 
