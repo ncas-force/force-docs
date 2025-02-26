@@ -8,7 +8,7 @@ Force documentation
    hysplit/runninghysplit
    
    :caption: How Force indexes and archives its files.
-
+   archive/introduction
 
    FORCE website <https://force.ncasdata.org/force>
 
