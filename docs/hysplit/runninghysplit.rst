@@ -43,7 +43,7 @@ Key Steps
 5. **Analyze Output:** HYSPLIT generates output files containing the calculated trajectories or dispersion.  You can visualize and analyze these results using various tools, including the HYSPLIT graphical interface or other software.
 
 Example: Calculating a Simple Trajectory
----------------------------------------
+----------------------------------------
 
 Let's say you want to calculate a 72-hour trajectory starting at 40°N, 75°W at an altitude of 100 meters on January 1, 1999.  You would:
 
