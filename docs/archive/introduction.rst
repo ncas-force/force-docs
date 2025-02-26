@@ -1,5 +1,9 @@
-How force Archive and index their files
-=======================================
+How FORCE organise their files
+==============================
 
-FORCE keeps a full database of the files created to enable us to better search and maintain our archives.
+FORCE maintains a comprehensive database of all generated files, allowing for efficient searching and archive management.
 
+Indexing Procedures
+-------------------
+
+We use a custom script to scan and index our files, ensuring accurate organisation and easy retrieval.
