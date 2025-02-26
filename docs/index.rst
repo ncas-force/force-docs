@@ -9,10 +9,10 @@ Force documentation
    hysplit/introduction
    hysplit/runninghysplit
    
-   :caption:FORCE File archives
+   :caption: FORCE File archives
    archive/introduction
    
-   :caption:FORCE website
+   :caption: FORCE website
    website/introduction
    
 
