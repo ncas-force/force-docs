@@ -1,4 +1,4 @@
-ncas_amof_netcdf_template documentation
+Force documentation
 =======================================
 
 
@@ -9,12 +9,14 @@ ncas_amof_netcdf_template documentation
    hysplit/introduction
    hysplit/runninghysplit
    
-   :caption:FORCE File indexing
+   :caption:FORCE File archives
+   archive/introduction
    
    :caption:FORCE website
+   website/introduction
    
 
-   FORCE website <https://https://force.ncasdata.org/force>
+   FORCE website <https://force.ncasdata.org/force>
 
 
 
