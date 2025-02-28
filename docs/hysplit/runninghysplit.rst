@@ -18,7 +18,7 @@ Key Steps
     *   **Meteorological Data:** Indicate the path to the meteorological data files.
     *   **Output Options:** Set the output file names, formats, and other options.
 
-    A typical control file might look like this (adjust as needed) :
+    A typicals ntrol file might look like this (adjust as needed) :
 
     ```
     CONTROL
