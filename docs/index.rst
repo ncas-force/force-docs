@@ -7,6 +7,7 @@ Force documentation
 
    hysplit/introduction
    hysplit/runninghysplit
+   hysplit/volcanohysplit
    
 .. toctree::   
    :caption: Details on how FORCE index and archive their files.
