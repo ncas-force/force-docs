@@ -12,7 +12,7 @@ Daily, as part of our operational workflow, the following HYSPLIT back trajector
 
 **1. Configuration:**
 
-* Simple setup control files are configured from a template file for each of the three observatories (CVAO, BTAO, WAO).
+* Simple setup control files are configured from a template file for each of the three observatories CVAO, BTAO, WAO and the combined run.
 * The control files are configured for backward trajectory calculations for 240 hours (10 days).
 
 **2. Parallel Execution:**
@@ -20,6 +20,16 @@ Daily, as part of our operational workflow, the following HYSPLIT back trajector
 * Each observatory is set up as its own instance, with a dedicated directory for its control and template files.
 * These instances are then run in parallel across the cluster.
 
-**3. Post Processing:**
+**3. Post-Processing:**
+
+* `trajplot` is used to produce postscript (.ps) files from the model output.
+* The postscript files are then converted to PNG (.png) files using `pstopng`.
+* The images are renamed in the format `observatoryname_YYMMDDHH.png`.
+* The images are transferred to the NCAS observations group workspace (GWS) in a dated directory.
+
+**4. Data Archiving:**
+
+* The model outputs data to small text files.
+* These text files are also useful for analysis and are uploaded to the GWS.
 
 
