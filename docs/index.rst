@@ -8,6 +8,7 @@ Force documentation
    hysplit/introduction
    hysplit/runninghysplit
    hysplit/volcanohysplit
+   hysplit/operationalhysplit
    
 .. toctree::
    :maxdepth: 1
