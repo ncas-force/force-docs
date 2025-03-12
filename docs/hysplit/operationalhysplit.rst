@@ -17,7 +17,7 @@ Daily, as part of our operational workflow, the following HYSPLIT back trajector
 
 **2. Parallel Execution:**
 
-* Each observatory is set up as its own instance, with a dedicated directory for its control and template files.
+* Each observatory and the combined run is set up as its own instance, with a dedicated directory for its control and template files.
 * These instances are then run in parallel across the cluster.
 
 **3. Post-Processing:**
@@ -32,4 +32,63 @@ Daily, as part of our operational workflow, the following HYSPLIT back trajector
 * The model outputs data to small text files.
 * These text files are also useful for analysis and are uploaded to the GWS.
 
+---------------------------------------
+Setup Details on the Thundercat Cluster
+---------------------------------------
 
+**1. User:**
+
+* A specific user account (`force-hysplit-iceland`) is set up on the cluster to run the HYSPLIT model.
+
+**2. Directory Structure:**
+
+* This user account has multiple HYSPLIT configurations for various projects.
+* The AMOF Observatory model runs are located in the `hysplit-nwr-runs` directory.
+* Within this directory, there are folders for `cape_verde`, `weybourne`, `bttower`, and `observatories`.
+* Each of these folders contains a specific template file for that location and the release heights for that case.
+
+**3. Control Files:**
+
+* The control files are configured for each observatory and the combined run.
+* The basic structure of these files is very similar, with the main differences being the starting location and the release heights.
+* This is an example control file for the Cape Verde Observatory for the 18:00 on the 25th of March 2025::
+
+    25 03 12 18               #STARTING TIME: YEAR MONTH DAY HOUR
+    3                         #NUMBER OF STARTING LOCATIONS
+    16.854419 -24.863748 17         #STARTING 1: LATITUDE LONGITUDE HEIGHT (m-agl)
+    16.854419 -24.863748 3000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
+    16.854419 -24.863748 6000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
+    -240                      #TOTAL RUN TIME (backwards)
+    0                         #VERTICAL MOTION CALCULATION METHOD
+    15500                     #TOP OF MODEL DOMAIN (m-AGL)
+    8                         #NUMBER OF INPUT DATA GRIDS
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250312/
+    hysplit.t00z.gfsf
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250312/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250311/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250310/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250309/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250308/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250307/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312/ftp.arl.noaa.gov/pub/forecast/20250306/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/cape_verde/
+    cape_verde_dump
+
+Breakdown of the control file:
+
+* The starting time is set to 25th March 2012 at 18:00.
+* There are three starting locations, each with a different height.
+* The total run time is set to 240 hours (10 days).
+* The vertical motion calculation method is set to 0.
+* The top of the model domain is set to 15500 m AGL.
+* Defines how many GFS input files the run is expecting to cover the 10 days run time.
+* The last lines specifies the input GFS file location.
+
+**4. Template Files:**
