@@ -100,32 +100,32 @@ Breakdown of the control file:
 This is an example of a template file. ::
 
     YY MM DD HH               #STARTING TIME: YEAR MONTH DAY HOUR
-3                         #NUMBER OF STARTING LOCATIONS
-16.854419 -24.863748 17         #STARTING 1: LATITUDE LONGITUDE HEIGHT (m-agl)
-16.854419 -24.863748 3000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
-16.854419 -24.863748 6000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
--240                      #TOTAL RUN TIME (backwards)
-0                         #VERTICAL MOTION CALCULATION METHOD
-15500                     #TOP OF MODEL DOMAIN (m-AGL)
-8                         #NUMBER OF INPUT DATA GRIDS
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TODAY/
-hysplit.t00z.gfsf
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TODAY/
-hysplit.t00z.gfsa
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/ONE_DAY/
-hysplit.t00z.gfsa
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TWO_DAY/
-hysplit.t00z.gfsa
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/THREE_DAY/
-hysplit.t00z.gfsa
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/FOUR_DAY/
-hysplit.t00z.gfsa
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/FIVE_DAY/
-hysplit.t00z.gfsa
-/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/SIX_DAY/
-hysplit.t00z.gfsa
-/home/force-hysplit-iceland/hysplit-nwr-runs/cape_verde/
-cape_verde_dump
+    3                         #NUMBER OF STARTING LOCATIONS
+    16.854419 -24.863748 17         #STARTING 1: LATITUDE LONGITUDE HEIGHT (m-agl)
+    16.854419 -24.863748 3000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
+    16.854419 -24.863748 6000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
+    -240                      #TOTAL RUN TIME (backwards)
+    0                         #VERTICAL MOTION CALCULATION METHOD
+    15500                     #TOP OF MODEL DOMAIN (m-AGL)
+    8                         #NUMBER OF INPUT DATA GRIDS
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TODAY/
+    hysplit.t00z.gfsf
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TODAY/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/ONE_DAY/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TWO_DAY/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/THREE_DAY/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/FOUR_DAY/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/FIVE_DAY/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/SIX_DAY/
+    hysplit.t00z.gfsa
+    /home/force-hysplit-iceland/hysplit-nwr-runs/cape_verde/
+    cape_verde_dump
 
 Breakdown of the template file:
 
