@@ -89,6 +89,65 @@ Breakdown of the control file:
 * The vertical motion calculation method is set to 0.
 * The top of the model domain is set to 15500 m AGL.
 * Defines how many GFS input files the run is expecting to cover the 10 days run time.
-* The last lines specifies the input GFS file location.
+* The next 8 lines are the paths to the GFS input files.
+* The last line is the path to the model dump file. (This is the file that is uploaded to the GWS)
 
 **4. Template Files:**
+
+* The template files are used to generate the control files for each run.
+* These files contain the basic structure of the control file, with placeholders for the specific details of each run.
+
+This is an example of a template file. ::
+
+    YY MM DD HH               #STARTING TIME: YEAR MONTH DAY HOUR
+3                         #NUMBER OF STARTING LOCATIONS
+16.854419 -24.863748 17         #STARTING 1: LATITUDE LONGITUDE HEIGHT (m-agl)
+16.854419 -24.863748 3000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
+16.854419 -24.863748 6000       #STARTING 1: LATITUDE LONGITUDE HEIGHT (m AGL)
+-240                      #TOTAL RUN TIME (backwards)
+0                         #VERTICAL MOTION CALCULATION METHOD
+15500                     #TOP OF MODEL DOMAIN (m-AGL)
+8                         #NUMBER OF INPUT DATA GRIDS
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TODAY/
+hysplit.t00z.gfsf
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TODAY/
+hysplit.t00z.gfsa
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/ONE_DAY/
+hysplit.t00z.gfsa
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/TWO_DAY/
+hysplit.t00z.gfsa
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/THREE_DAY/
+hysplit.t00z.gfsa
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/FOUR_DAY/
+hysplit.t00z.gfsa
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/FIVE_DAY/
+hysplit.t00z.gfsa
+/home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/TODAY/ftp.arl.noaa.gov/pub/forecast/SIX_DAY/
+hysplit.t00z.gfsa
+/home/force-hysplit-iceland/hysplit-nwr-runs/cape_verde/
+cape_verde_dump
+
+Breakdown of the template file:
+
+* The starting time is set to the placeholders YY MM DD HH.
+* There are three starting locations, each with a different height.
+* The total run time is set to 240 hours (10 days).
+* The vertical motion calculation method is set to 0.
+* The top of the model domain is set to 15500 m AGL.
+* Defines how many GFS input files the run is expecting to cover the 10 days run time.
+* The next 8 lines are the paths to the GFS input files placeholders for the day of the file.
+* The last line is the path to the model dump file.
+
+There is a script that runs on a cron that will replaces the placeholder with the correct date and paths for the model run. 
+
+**6. GFS data files:**
+
+There is a cron that runs daily to download the required GFS data files for the model runs. The GFS data files are downloaded from the 
+NOAA FTP server and stored in the `GFS-DATA` directory for example /home/force-hysplit-iceland/hysplit-nwr-runs/GFS-DATA/20250312
+
+**6. Running the model:**
+
+There is a cron script that calls a master script to run all the model instances in parallel. The master script will run the model for each observatory and the combined run. The model is run in parallel across the cluster.
+This script also calls a script to download the required GFS data files. 
+
+
