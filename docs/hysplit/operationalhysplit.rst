@@ -147,7 +147,18 @@ NOAA FTP server and stored in the `GFS-DATA` directory for example /home/force-h
 
 **6. Running the model:**
 
-There is a cron script that calls a master script to run all the model instances in parallel. The master script will run the model for each observatory and the combined run. The model is run in parallel across the cluster.
-This script also calls a script to download the required GFS data files. 
+There is a cron job for the HYSPLIT user that calls a master script to run all the model instances in parallel.
+Prior to running the model the master script calls a script to download the required GFS data files.  
+The master script will run the model for each observatory and the combined run.  
+HYSPLIT is run for the start times 00 06 12 and 18 hours.
+It is a fairly low resource and a quick model to run. 
+
+**7. Post-Processing:**
+Once the model has created the dump file for each run the `trajplot` command is used to create a postscript file.
+The postscript files are then converted to PNG files using the `pstopng` command.
+The images are then renamed in the format `observatoryname_YYMMDDHH.png`.
+The images are then transferred to the NCAS observations group workspace (GWS) in a dated directory.
+The dump files are also uploaded to the GWS for further analysis.
+
 
 
