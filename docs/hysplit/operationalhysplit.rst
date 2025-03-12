@@ -51,7 +51,7 @@ Setup Details on the Thundercat Cluster
 
 * The control files are configured for each observatory and the combined run.
 * The basic structure of these files is very similar, with the main differences being the starting location and the release heights.
-* This is an example control file for the Cape Verde Observatory for the 18:00 on the 25th of March 2025::
+* This is an example control file for the Cape Verde Observatory for the 18:00 on the 12th of March 2025::
 
     25 03 12 18               #STARTING TIME: YEAR MONTH DAY HOUR
     3                         #NUMBER OF STARTING LOCATIONS
@@ -83,14 +83,14 @@ Setup Details on the Thundercat Cluster
 
 Breakdown of the control file:
 
-* The starting time is set to 25th March 2012 at 18:00.
+* The starting time is set to 12th March 2025 at 18:00.
 * There are three starting locations, each with a different height.
 * The total run time is set to 240 hours (10 days).
 * The vertical motion calculation method is set to 0.
 * The top of the model domain is set to 15500 m AGL.
 * Defines how many GFS input files the run is expecting to cover the 10 days run time.
 * The next 8 lines are the paths to the GFS input files.
-* The last line is the path to the model dump file. (This is the file that is uploaded to the GWS)
+* The last line is the path to the model dump file. (the file uploaded to the GWS)
 
 **4. Template Files:**
 
@@ -150,7 +150,7 @@ NOAA FTP server and stored in the `GFS-DATA` directory for example /home/force-h
 There is a cron job for the HYSPLIT user that calls a master script to run all the model instances in parallel.
 Prior to running the model the master script calls a script to download the required GFS data files.  
 The master script will run the model for each observatory and the combined run.  
-HYSPLIT is run for the start times 00 06 12 and 18 hours.
+HYSPLIT is run for the start times 00:00, 06:00, 12:00, and 18:00 UTC each day.
 It is a fairly low resource and a quick model to run. 
 
 **7. Post-Processing:**
