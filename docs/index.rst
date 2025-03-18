@@ -15,7 +15,13 @@ Force documentation
    :caption: Information on how FORCE use the WRF model
 
    wrf/wrf_ecmwf
-   
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Information on converting files to Geojson
+
+   Convert2GeoJSON/Convert2GeoJSON
+
 .. toctree::   
    :caption: Details on how FORCE index and archive their files.
    
