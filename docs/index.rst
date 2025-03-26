@@ -15,6 +15,7 @@ Force documentation
    :caption: Information on how FORCE use the WRF model
 
    wrf/wrf_ecmwf
+   wrf/wrf_benchmark
 
 
 .. toctree::
